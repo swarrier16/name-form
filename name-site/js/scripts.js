@@ -8,8 +8,11 @@
 
 $(document).ready(function() {
 
-  var playerFirstName = '';
+  var playerFirstName = ' ';
+  var playerMiddleName = '';
+  var playerLastName = '';
 
+  $('#first-name').focus();
   // Store player name
   $('#name-button').on('click', function(e) {
     e.preventDefault(); // prevents form from submitting to a database
@@ -17,7 +20,6 @@ $(document).ready(function() {
     $('#show-player-first-name').text(playerFirstName);
   })
 
-var playerMiddleName = '';
 
   // Store player name
   $('#name-button').on('click', function(e) {
@@ -25,8 +27,7 @@ var playerMiddleName = '';
     playerMiddleName = $('#player-middle-name').val();
     $('#show-player-middle-name').text(playerMiddleName);
   })
-
-  var playerLastName = '';
+  
 
   // Store player name
   $('#name-button').on('click', function(e) {
@@ -34,5 +35,6 @@ var playerMiddleName = '';
     playerLastName = $('#player-last-name').val();
     $('#show-player-last-name').text(playerLastName);
   })
+  
 }) // ready function ends
 
